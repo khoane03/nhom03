@@ -1,28 +1,27 @@
 <h3 style="text-align: center;text-transform: uppercase;">Tin tức mới nhất</h3>
 <?php
-	$sql_bv = "SELECT * FROM tbl_baiviet WHERE tinhtrang=1 ORDER BY id DESC";
-	$query_bv = mysqli_query($mysqli,$sql_bv);
-	
-?>				
-				<button>Bài viết mới nhất</button>
-					<?php
-					$sql = "SELECT * FROM tbl_baiviet ORDER BY id DESC";
-					?>
-				<ul class="product_list">
-					<?php
-					while($row_bv = mysqli_fetch_array($query_bv)){ 
-					?>
-					<li>
-						<a href="index.php?quanly=baiviet&id=<?php echo $row_bv['id'] ?>">
-							<img src="admincp/modules/quanlybaiviet/uploads/<?php echo $row_bv['hinhanh'] ?>">
-							<p class="title_product">Tên bài viết : <?php echo $row_bv['tenbaiviet'] ?></p>
+$sql_bv = "SELECT * FROM tbl_baiviet WHERE tinhtrang=1 ORDER BY id DESC";
+$query_bv = mysqli_query($mysqli, $sql_bv);
 
-							
-						</a>
-						<p style="margin:10px" class="title_product"><?php echo $row_bv['tomtat'] ?></p>
-					</li>
-					<?php
-					} 
-					?>
-					
-				</ul>
+?>
+<span>Bài viết mới nhất</span>
+<?php
+$sql = "SELECT * FROM tbl_baiviet ORDER BY id DESC";
+?>
+<div class="product_list">
+	<?php
+	while ($row_bv = mysqli_fetch_array($query_bv)) {
+	?>
+		<div class="product_item">
+			<a class="list-item" href="index.php?quanly=baiviet&id=<?php echo $row_bv['id'] ?>">
+				<img class="item-img" src="admincp/modules/quanlybaiviet/uploads/<?php echo $row_bv['hinhanh'] ?>">
+				<p class="title_product"> <?php echo $row_bv['tenbaiviet'] ?></p>
+
+
+			</a>
+		</div>
+	<?php
+	}
+	?>
+
+</div>

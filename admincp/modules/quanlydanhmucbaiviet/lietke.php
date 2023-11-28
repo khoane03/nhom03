@@ -2,7 +2,8 @@
 	$sql_lietke_danhmucbv = "SELECT * FROM tbl_danhmucbaiviet ORDER BY thutu DESC";
 	$query_lietke_danhmucbv = mysqli_query($mysqli,$sql_lietke_danhmucbv);
 ?>
-<p>Liệt kê danh mục bài viết</p>
+<h3 class="title_item">Liệt kê danh mục bài viết</h3>
+
 <table style="width:100%" border="1" style="border-collapse: collapse;">
   <tr>
   	<th>Id</th>

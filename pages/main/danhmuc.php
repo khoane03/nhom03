@@ -14,7 +14,7 @@ $row_title = mysqli_fetch_array($query_cate);
         <div class="product_item" >
             <a class="list-item" href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sanpham'] ?>">
                 <img class="item-img" src="admincp/modules/quanlysp/uploads/<?php echo $row_pro['hinhanh'] ?>">
-                <p class="title_product" class="title_product">Tên sản phẩm: <?php echo $row_pro['tensanpham'] ?></p>
+                <p class="title_product" class="title_product"><?php echo $row_pro['tensanpham'] ?></p>
                 <span class="price_product">Giá: <?php echo number_format($row_pro['giasp'], 0, ',', '.') . ' VND' ?></span>
                 <p class="price">Giá gốc: <?php echo number_format($row_pro['giagoc'], 0, ',', '.') . ' VND' ?> </p>
             </a>

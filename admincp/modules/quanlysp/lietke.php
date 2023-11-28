@@ -2,7 +2,7 @@
     $sql_lietke_sp = "SELECT * FROM tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc ORDER BY id_sanpham DESC";
     $query_lietke_sp = mysqli_query($mysqli,$sql_lietke_sp);
 ?>
-<p>Liệt kê danh mục sản phẩm</p>
+<h3 class="title_item">Liệt kê danh mục sản phẩm</h3>
 <table style="width:100%" border="1" style="border-collapse: collapse;">
     <tr>
         <th>Id</th>

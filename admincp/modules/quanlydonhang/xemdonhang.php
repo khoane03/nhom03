@@ -1,7 +1,8 @@
-<p>Xem đơn hàng</p>
+<h3 class="title_item">Xem đơn hàng</h3>
+
 <?php
 	$code = $_GET['code'];
-	$sql_lietke_dh = "SELECT * FROM tbl_cart_details,tbl_sanpham WHERE tbl_cart_details.id_sanpham=tbl_sanpham.id_sanpham AND tbl_cart_details.code_cart='$code' ORDER BY tbl_cart_details.id_cart_details DESC";
+	$sql_lietke_dh = "SELECT * FROM tbl_cart_details,tbl_sanpham WHERE tbl_cart_details.code_cart='$code' AND tbl_cart_details.id_sanpham = tbl_sanpham.id_sanpham ORDER BY tbl_cart_details.id_cart_details DESC";
 	$query_lietke_dh = mysqli_query($mysqli,$sql_lietke_dh);
 ?>
 <table style="width:100%" border="1" style="border-collapse: collapse;">
@@ -13,7 +14,7 @@
     <th>Đơn giá</th>
     <th>Thành tiền</th>
   
-  
+  xx
   </tr>
   <?php
   $i = 0;

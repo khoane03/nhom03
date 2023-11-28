@@ -1,4 +1,4 @@
-<p>Thêm bài viết</p>
+<h3 class="title_item">Thêm bài viết</h3>
 <table border="1" width="100%" style="border-collapse: collapse;">
  <form method="POST" action="modules/quanlybaiviet/xuly.php" enctype="multipart/form-data">
 	  <tr>
@@ -43,8 +43,11 @@
 	    	</select>
 	    </td>
 	  </tr>
-	   <tr>
-	    <td colspan="2"><input type="submit" name="thembaiviet" value="Thêm bài viết"></td>
-	  </tr>
+	  <td>
+		
+	  </td>
+	   <td>
+	   <button class="btn_out" type="submit" name="thembaiviet">Thêm</button>
+	  </td>
  </form>
 </table>

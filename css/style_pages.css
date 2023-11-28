@@ -32,14 +32,6 @@
     margin: 0 10px;
 }
 
-input.themgiohang {
-    border: none;
-    background: blue;
-    color: #fff;
-    padding: 12px;
-    font-size: 15px;
-    cursor: pointer;
-}
 
 .header {
     background-image: url("../images/banner.jpg");
@@ -350,3 +342,10 @@ ul#tabs-nav li.active {
     border: 5px solid #00e6ac;
     background-color: #FFF;
 }
+.btn_sign{
+    background-color: #00e6ac;
+}
+
+/*  */
+
+

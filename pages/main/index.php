@@ -7,9 +7,9 @@ if (isset($_GET['trang'])) {
 if ($page == '' || $page == 1) {
     $begin = 0;
 } else {
-    $begin = ($page * 8) - 8;
+    $begin = ($page * 10) - 10;
 }
-$sql_pro = "SELECT * FROM tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc ORDER BY tbl_sanpham.id_sanpham DESC LIMIT $begin,8";
+$sql_pro = "SELECT * FROM tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc ORDER BY tbl_sanpham.id_sanpham DESC LIMIT $begin,10";
 $query_pro = mysqli_query($mysqli, $sql_pro);
 
 ?>
@@ -36,7 +36,7 @@ $query_pro = mysqli_query($mysqli, $sql_pro);
 
 $sql_trang = mysqli_query($mysqli, "SELECT * FROM tbl_sanpham");
 $row_count = mysqli_num_rows($sql_trang);
-$trang = ceil($row_count / 8);
+$trang = ceil($row_count / 10);
 ?>
 <p>Trang hiện tại: <?php echo $page ?>/<?php echo $trang ?></p>
 
@@ -45,7 +45,7 @@ $trang = ceil($row_count / 8);
     for ($i = 1; $i <= $trang; $i++) {
     ?>
         <li <?php if ($i == $page) {
-                echo 'style="background:#aa6342"';
+                echo 'style="border: 1px solid; background: burlywood;"';
             } else {
                 echo '';
             } ?>><a href="index.php?trang=<?php echo $i ?>"><?php echo $i ?></a></li>
@@ -53,27 +53,31 @@ $trang = ceil($row_count / 8);
     }
     ?>
 
+    
 </ul>
+<style>
 
+ul.list_trang {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
-<style type="text/css">
-    ul.list_trang {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
+ul.list_trang li {
+    float: left;
+    padding: 5px 10px;
+    margin: 5px;
+    display: block;
+}
 
-    ul.list_trang li {
-        float: left;
-        padding: 5px 15px;
-        margin: 5px;
-        background: burlywood;
-        display: block;
-    }
+ul.list_trang li a {
+    background: burlywood;
+    padding: 5px 10px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
 
-    ul.list_trang li a {
-        color: #000;
-        text-align: center;
-        text-decoration: none;
-    }
 </style>
+
+

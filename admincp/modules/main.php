@@ -22,7 +22,7 @@
                 }elseif ($tam=='quanlysp' && $query=='sua') {
                     include("modules/quanlysp/sua.php");
 
-                }elseif ($tam=='quanlydonhang' && $query=='lietke') {
+                }elseif ($tam=='quanlydonhang' && $query=='donhang') {
                     include("modules/quanlydonhang/lietke.php");
 
                 }elseif ($tam=='donhang' && $query=='xemdonhang') {

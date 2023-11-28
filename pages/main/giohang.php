@@ -1,7 +1,7 @@
-<p>Giỏ hàng
+<p>
 <?php
   if(isset($_SESSION['dangky'])){
-    echo 'xin chào: '.'<span style="color:red">'.$_SESSION['dangky'].'</span>';
+    echo 'Xin chào: '.'<span style="color:red">'.$_SESSION['dangky'].'</span>';
   }
 ?>
 </p>

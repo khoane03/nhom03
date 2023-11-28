@@ -1,16 +1,10 @@
-<p>Thêm danh mục bài viết</p>
-<table border="1" width="50%" style="border-collapse: collapse;">
- <form method="POST" action="modules/quanlydanhmucbaiviet/xuly.php">
-	  <tr>
-	  	<td>Tên danh mục bài viết</td>
-	  	<td><input type="text" name="tendanhmucbaiviet"></td>
-	  </tr>
-	  <tr>
-	    <td>Thứ tự</td>
-	    <td><input type="text" name="thutu"></td>
-	  </tr>
-	   <tr>
-	    <td colspan="2"><input type="submit" name="themdanhmucbaiviet" value="Thêm danh mục bài viết"></td>
-	  </tr>
- </form>
-</table>
+<h3 class="title_item">Thêm danh mục bài viết</h3>
+<form method="POST" action="modules/quanlydanhmucbaiviet/xuly.php">
+	<div class="form">
+		<label for="tendanhmuc">Tên danh mục : </label>
+		<input type="text" name="tendanhmucbaiviet"> <br>
+		<label for="">Thứ tự :</label>
+		<input type="text" name="thutu"> <br>
+		<button class="btn_out btn_move" type="submit" name="themdanhmucbaiviet">Thêm</button>
+	</div>
+</form>
